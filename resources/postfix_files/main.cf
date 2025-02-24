@@ -1,0 +1,13 @@
+smtpd_banner = $myhostname ESMTP $mail_name
+biff = no
+append_dot_mydomain = no
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+mydestination = $myhostname, localhost.$mydomain, localhost
+relayhost = harelay.hallon.es
+mynetworks = 127.0.0.0/8
+inet_interfaces = loopback-only
+recipient_delimiter = +
+mydomain = hallon.es
+masquerade_domains = $mydomain
+smtp_generic_maps = hash:/etc/postfix/generic
